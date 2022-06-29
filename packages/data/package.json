@@ -1,0 +1,24 @@
+{
+  "name": "@clean/data",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "npm run clean && npx tsc -p tsconfig.build.json --diagnostics",
+    "clean": "rm -rf ./dist",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^18.0.0",
+    "typescript": "^4.7.3"
+  },
+  "dependencies": {
+    "@clean/core": "^1.0.0",
+    "inversify": "^6.0.1",
+    "mongodb": "^4.7.0",
+    "mongoose": "^6.4.1"
+  }
+}

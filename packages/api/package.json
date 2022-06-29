@@ -1,0 +1,30 @@
+{
+  "name": "@clean/api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index",
+  "types": "dist/index",
+  "scripts": {
+    "build": "npm run clean && npx tsc -p tsconfig.build.json --diagnostics",
+    "clean": "rm -rf ./dist",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node -r ts-node/register ./dist/server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^18.0.0",
+    "ts-node": "^10.8.1",
+    "typescript": "^4.7.3"
+  },
+  "dependencies": {
+    "@clean/core": "^1.0.0",
+    "@clean/data": "^1.0.0",
+    "chalk": "^5.0.1",
+    "cors": "^2.8.5",
+    "inversify": "^6.0.1",
+    "inversify-express-utils": "^6.4.3",
+    "luxon": "^2.4.0",
+    "morgan": "^1.10.0"
+  }
+}

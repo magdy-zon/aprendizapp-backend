@@ -1,0 +1,21 @@
+{
+  "name": "@clean/core",
+  "version": "1.0.0",
+  "description": "Core of project",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "npm run clean && npx tsc -p tsconfig.build.json --diagnostics",
+    "clean": "rm -rf ./dist",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^18.0.0",
+    "typescript": "^4.7.3"
+  },
+  "dependencies": {
+    "inversify": "^6.0.1"
+  }
+}

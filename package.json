@@ -1,0 +1,20 @@
+{
+  "name": "aprendizapp-backend",
+  "version": "1.0.0",
+  "description": "Aprendizapp backend",
+  "main": "index.js",
+  "scripts": {
+    "clean": "npx lerna run clean",
+    "debugger": "npx lerna run --scope api debugger --stream",
+    "dev": "npx lerna run --scope api dev --stream",
+    "build": "npx lerna run build",
+    "init": "npx lerna bootstrap",
+    "start": "npx lerna run start --stream",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "lerna": "^5.1.0"
+  }
+}
