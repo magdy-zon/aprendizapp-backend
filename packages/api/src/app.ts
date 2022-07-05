@@ -1,3 +1,4 @@
+import 'reflect-metadata';
 import { MongoConfig } from '@clean/data';
 import { Server } from 'http';
 import { InversifyExpressServer } from 'inversify-express-utils';

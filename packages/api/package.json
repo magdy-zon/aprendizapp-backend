@@ -13,6 +13,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@commitlint/cli": "^17.0.3",
     "@types/node": "^18.0.0",
     "ts-node": "^10.8.1",
     "typescript": "^4.7.3"
@@ -20,11 +21,12 @@
   "dependencies": {
     "@clean/core": "^1.0.0",
     "@clean/data": "^1.0.0",
-    "chalk": "^5.0.1",
+    "chalk": "^4.0.1",
     "cors": "^2.8.5",
     "inversify": "^6.0.1",
     "inversify-express-utils": "^6.4.3",
-    "luxon": "^2.4.0",
-    "morgan": "^1.10.0"
+    "luxon": "1.27.0",
+    "morgan": "^1.10.0",
+    "reflect-metadata": "^0.1.13"
   }
 }
