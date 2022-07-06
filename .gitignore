@@ -7,3 +7,7 @@ node_modules/
 
 .vscode
 .vscode/*
+
+
+.env
+runserver.sh

@@ -1,25 +1,25 @@
 import 'reflect-metadata';
-import { MongoConfig } from '@clean/data';
-import { Server } from 'http';
-import { InversifyExpressServer } from 'inversify-express-utils';
-import { EnvAprendizapp, MyStream } from './config';
-import { capaContainer } from './inversify.config';
 import express, { Application } from 'express';
-import { BASETYPES, IBaseLogger } from '@clean/core';
-import { CorsConfig } from './config';
-import {morgan} from 'morgan';
+import { InversifyExpressServer } from 'inversify-express-utils';
+import { Server } from 'http';
+import * as morgan from 'morgan';
 import chalk from 'chalk';
 import { DateTime } from 'luxon';
+
+import { BASETYPES, IBaseLogger } from '@clean/core';
+import { MongoConfig } from '@clean/data';
+import { capaContainer } from './inversify.config';
+import { CorsConfig, EnvAprendizapp, MyStream } from './config';
 
 
 export class ServerApp {
   private blue = chalk.bold.blue;
   private yellow = chalk.yellow;
   private grey = chalk.bold.grey;
-  public mongo: MongoConfig;
   private log: IBaseLogger = capaContainer.get<IBaseLogger>(BASETYPES.Log);
   private cors: CorsConfig = capaContainer.get<CorsConfig>(CorsConfig);
   private myStream: MyStream = capaContainer.get<MyStream>(MyStream);
+  public mongo: MongoConfig;
 
   private _initialConfig(app: Application): void {
     app.use(express.json());
@@ -27,6 +27,13 @@ export class ServerApp {
   private _corsConfig(app: Application): void {
     this.log.info('init cors config');
     app.use(this.cors.initCors());
+  }
+  private async _mongoConfig(): Promise<void> {
+    const mongo: MongoConfig = capaContainer.get<MongoConfig>(MongoConfig);
+    this.mongo = mongo;
+    await mongo.initConnection();
+    mongo.setAutoReconnect();
+    mongo.setEvents();
   }
   private async _logConfig(app: express.Application): Promise<void> {
     app.use(
@@ -48,13 +55,6 @@ export class ServerApp {
     );
   }
 
-  private async _mongoConfig(): Promise<void> {
-    const mongo: MongoConfig = capaContainer.get<MongoConfig>(MongoConfig);
-    this.mongo = mongo;
-    await mongo.initConnection();
-    mongo.setAutoReconnect();
-    mongo.setEvents();
-  }
 
   public async listen(): Promise<Server> {
     await this._mongoConfig();
