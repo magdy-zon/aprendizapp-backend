@@ -19,7 +19,7 @@
     "@commitlint/cli": "^12.1.4",
     "@commitlint/config-conventional": "^12.1.4",
     "@types/node": "^15.14.9",
-    "lerna": "^5.1.0"
+    "lerna": "^5.2.0"
   },
   "type": "module"
 }

@@ -1,0 +1,8 @@
+#!/bin/bash
+
+export DBURL='Your database URI conection'
+export DBUSER='Your user in mongo client'
+export DBPASS='Your pass in mongo client'
+export PORT='Your port to connect the app'
+export DBNAME='Your db name in mongo client'
+export NODE_ENV='Your defined environment'
