@@ -6,4 +6,6 @@ export interface IModelStudent extends Document {
   age: number;
   password: string;
   verified: string;
+  createdAt: Date;
+  updatedAt: Date;
 }
