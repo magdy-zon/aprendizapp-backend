@@ -17,6 +17,7 @@
   },
   "dependencies": {
     "@clean/core": "^1.0.0",
+    "coverage": "^0.4.1",
     "inversify": "^6.0.1",
     "mongodb": "^4.3.1",
     "mongoose": "^6.1.8",

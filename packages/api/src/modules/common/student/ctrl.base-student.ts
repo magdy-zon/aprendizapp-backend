@@ -12,7 +12,7 @@ export class BaseStudentController extends BaseHttpController {
 
   @httpGet('/students')
   public async getProperties() {
-    const response = await this.ucStudent.getProperties();
+    const response = await this.ucStudent.allStudents();
 
     return { response };
   }
