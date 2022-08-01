@@ -15,3 +15,6 @@ runserver.sh
 
 
 coverage/
+
+
+package-lock.json
