@@ -6,7 +6,7 @@ export class BaseUseCaseStudent {
     private bndStudentRead: IBndStudentRead
   ) {}
 
-  public async getProperties() {
-    return this.bndStudentRead.getProperties();
+  public async allStudents() {
+    return this.bndStudentRead.allStudents();
   }
 }

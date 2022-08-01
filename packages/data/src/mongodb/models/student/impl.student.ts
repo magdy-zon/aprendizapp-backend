@@ -44,6 +44,5 @@ class SchemaStudent extends Schema {
 }
 
 const schemaStudent = new SchemaStudent();
-
 export const ModelStudent: Model<IModelStudent> = 
   model<IModelStudent>('Student', schemaStudent);

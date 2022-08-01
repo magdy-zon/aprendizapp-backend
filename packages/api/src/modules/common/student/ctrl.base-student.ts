@@ -1,6 +1,6 @@
-import { BaseUseCaseStudent } from "@clean/core";
 import { inject } from "inversify";
 import { BaseHttpController, httpGet } from "inversify-express-utils";
+import { BaseUseCaseStudent } from "@clean/core";
 
 
 export class BaseStudentController extends BaseHttpController {
@@ -12,7 +12,7 @@ export class BaseStudentController extends BaseHttpController {
 
   @httpGet('/students')
   public async getProperties() {
-    const response = await this.ucStudent.getProperties();
+    const response = await this.ucStudent.allStudents();
 
     return { response };
   }
