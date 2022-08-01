@@ -3,6 +3,8 @@ import { IModelBlock } from '..';
 
 
 export interface IModelActivity extends Document {
-  name: string;
+  title: string;
+  subtitle: string;
+  notes: string[];
   block: Schema.Types.ObjectId | IModelBlock;
 }

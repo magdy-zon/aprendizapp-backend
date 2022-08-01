@@ -31,6 +31,8 @@ export class MongoConfig {
           user: dbUser,
           pass: dbPass,
           dbName,
+          useNewUrlParser: true,
+          useUnifiedTopology: true
         });
         this._log.info(
           `the database connection to ${dbUrl} ${dbName} has been successfully`
@@ -41,6 +43,8 @@ export class MongoConfig {
           socketTimeoutMS: 10000,
           maxPoolSize: 10,
           dbName,
+          useNewUrlParser: true,
+          useUnifiedTopology: true
         });
         this._log.info(
           `the database connection to ${dbUrl} ${dbName} has been successfully`

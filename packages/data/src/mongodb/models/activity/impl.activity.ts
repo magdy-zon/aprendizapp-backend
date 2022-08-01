@@ -4,10 +4,18 @@ import { IModelActivity } from '.';
 class SchemaActivity extends Schema {
   constructor() {
     super({
-      name: {
+      title: {
         type: String,
         required: false
       },
+      subtitle: {
+        type: String,
+        required: false
+      },
+      notes: [{
+        type: String,
+        required: true
+      }],
       block: {
         type: Schema.Types.ObjectId,
         required: false,

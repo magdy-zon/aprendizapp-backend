@@ -1,1 +1,2 @@
-export * from './common/student';
+export * from './common';
+export * from './middlewares';

@@ -1,0 +1,13 @@
+0 silly argv {
+0 silly argv   _: [ 'add' ],
+0 silly argv   globs: [],
+0 silly argv   lernaVersion: '5.3.0',
+0 silly argv   '$0': '..\\..\\..\\AppData\\Local\\npm-cache\\_npx\\d5cad42883f80c04\\node_modules\\lerna\\cli.js',
+0 silly argv   pkg: '@eslint/config'
+0 silly argv }
+1 notice cli v5.3.0
+2 verbose rootPath C:\Users\Magdiel Juarez\Documents\Developing\aprendizapp-backend
+3 error HttpErrorGeneral: 404 Not Found - GET https://registry.npmjs.org/@eslint%2fconfig - Not found
+3 error     at C:\Users\Magdiel Juarez\AppData\Local\npm-cache\_npx\d5cad42883f80c04\node_modules\npm-registry-fetch\lib\check-response.js:93:15
+3 error     at processTicksAndRejections (node:internal/process/task_queues:96:5)
+3 error     at async RegistryFetcher.packument (C:\Users\Magdiel Juarez\AppData\Local\npm-cache\_npx\d5cad42883f80c04\node_modules\pacote\lib\registry.js:92:19)

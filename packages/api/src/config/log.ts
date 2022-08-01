@@ -1,5 +1,5 @@
-import { IBaseLogger } from "@clean/core";
-import { injectable } from "inversify";
+import { IBaseLogger } from '@clean/core';
+import { injectable } from 'inversify';
 import { Logger, createLogger, format, transports } from 'winston';
 const { combine, timestamp, prettyPrint } = format;
 import {

@@ -1,6 +1,6 @@
 import { injectable } from "inversify";
 import { IBndStudentRead } from "@clean/core";
-import { ModelStudent } from "dist/mongodb/models";
+import { ModelStudent } from "../../models";
 
 @injectable()
 export class ImplBndStudentRead implements IBndStudentRead {
@@ -11,6 +11,5 @@ export class ImplBndStudentRead implements IBndStudentRead {
     } catch (error) {
       console.log(error)
     }
-    return null;
   }
 }

@@ -1,6 +1,6 @@
-import { BaseUseCaseStudent } from "@clean/core";
 import { inject } from "inversify";
 import { BaseHttpController, httpGet } from "inversify-express-utils";
+import { BaseUseCaseStudent } from "@clean/core";
 
 
 export class BaseStudentController extends BaseHttpController {
