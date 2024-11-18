@@ -55,6 +55,7 @@ export class MongoConfig {
       }
       return conn;
     } catch (error) {
+      this._log.error(error);
       return process.exit(1);
     }
   }
