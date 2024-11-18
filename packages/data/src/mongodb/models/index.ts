@@ -3,3 +3,4 @@ export * from './block';
 export * from './questionnaire';
 export * from './student';
 export * from './user';
+export * from './provider';
