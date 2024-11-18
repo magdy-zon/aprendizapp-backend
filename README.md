@@ -1,5 +1,14 @@
 
-# Aprendizapp Backend
+# Contratame API Project
+
+## Prerequisites
+
+Be sure to use the last version for node and npm
+
+Recommended version for work:
+npm v10.0.0+
+node v22.0.0+
+
 ## Working with the project
 
 Install the dependencies.
@@ -36,6 +45,19 @@ lerna info Executing command in 1 package: “npm run start”
 @clean/api: info: the database connection to mongodb://127.0.0.1:27017 aprendizapp-be has been successfully  
 @clean/api: info: init cors config  
 @clean/api: info: Server listening on port 3140
+```
+
+
+# Database
+
+The project use a MongoDB and a mongoose ORM to work with collections manipulations
+
+## Migrations
+
+If you create a migration, you can run it with the comand:
+
+```
+npm run migrate:up
 ```
 
 
