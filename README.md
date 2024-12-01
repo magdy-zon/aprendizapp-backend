@@ -48,20 +48,29 @@ lerna info Executing command in 1 package: “npm run start”
 ```
 
 
-# Database
+# Project structure
 
-The project use a MongoDB and a mongoose ORM to work with collections manipulations
-
-## Migrations
-
-If you create a migration, you can run it with the comand:
+La arquitectura de este proyecto se define por capas, cada una que tiene la idea de poder distribuirse de manera independiente a través de paquetes de npm. La estructura es la siguiente:
 
 ```
-npm run migrate:up
+
+contratame-api
+|-- packages
+    |-- api
+        |-- src 
+            |-- config
+            |-- modules
+    |-- core
+        |-- src
+    |-- data
+        |-- src
+            |-- mongodb
+                |-- implements
+                |-- migrations
+                |-- models
 ```
 
-
-# Layered Architecture
+## Layered Architecture
 
 "The most common architecture pattern is the layered architecture pattern, otherwise known as the n-tier architecture pattern. This pattern is the de facto standard for most Java EE applications and therefore is widely known by most architects, designers, and developers. The layered architecture pattern closely matches the traditional IT communication and organizational structures found in most companies, making it a natural choice for most business application development efforts."
 
@@ -70,3 +79,22 @@ npm run migrate:up
 ![sapr_0101](https://github.com/magdy-zon/aprendizapp-backend/assets/609756/8f247b16-850f-413c-a4a7-3f8620bd41ba)
 
 
+
+## api
+
+
+## core
+
+
+## data
+
+The project use a MongoDB database and a mongoose ORM to work with collections.
+We use mongoose as our database ORM v5+
+
+### Migrations
+
+If you want to create amigration add it in the ```packages/data/src/mongodb/migrations``` create a migration, you can run it with the comand:
+
+```
+npm run migrate:up
+```
