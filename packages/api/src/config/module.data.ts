@@ -1,4 +1,3 @@
-import { controller } from 'inversify-express-utils';
 import { ContainerModule, interfaces } from 'inversify';
 import { COMMON } from './';
 import { 
@@ -6,23 +5,28 @@ import {
   BaseQuestionnaireController,
   BaseActivityController,
   BaseBlockController,
+  BaseUserController
 } from '../modules/common';
 import { 
   ImplBndActivityRead,
   ImplBndBlockRead,
   ImplBndQuestionnaireRead, 
-  ImplBndStudentRead 
+  ImplBndStudentRead, 
+  ImplBndUserWrite
 } from '@clean/data';
 import { 
   BaseUseCaseActivity,
   BaseUseCaseBlock,
   BaseUseCaseQuestionnaire, 
   BaseUseCaseStudent, 
+  BaseUseCaseUser, 
   IBndActivityRead, 
   IBndBlockRead, 
-  IBndQuestionnaireRead, 
-  IBndStudentRead 
+  IBndQuestionnaireRead,
+  IBndStudentRead, 
+  IBndUserWrite
 } from '@clean/core';
+import { controller } from 'inversify-express-utils';
 
 export const DataModule = new ContainerModule((bind: interfaces.Bind) => {
   // Student
@@ -60,4 +64,13 @@ export const DataModule = new ContainerModule((bind: interfaces.Bind) => {
     );
   });
   controller('')(BaseBlockController);
+
+  //User
+  bind<IBndUserWrite>(COMMON.bndUserWrite).to(ImplBndUserWrite);
+  bind<BaseUseCaseUser>('BaseUseCaseUser').toDynamicValue((context) => {
+    return new BaseUseCaseUser(
+      context.container.get<IBndUserWrite>(COMMON.bndUserWrite)
+    );
+  });
+  controller('')(BaseUserController);
 });
