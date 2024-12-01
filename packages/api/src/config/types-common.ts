@@ -4,4 +4,5 @@ export const COMMON = {
   bndQuestionnaireRead: Symbol.for('bndQuestionnaireRead'),
   bndActivityRead: Symbol.for('bndActivityRead'),
   bndBlockRead: Symbol.for('bndBlockRead'),
+  bndUserWrite: Symbol.for('bndUserWrite')
 };
