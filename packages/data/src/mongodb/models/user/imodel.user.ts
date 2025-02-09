@@ -5,7 +5,7 @@ export interface IModelUser extends Document {
   first_lastname: string;
   second_lastname: number;
   birthdate: string;
-  verified: Boolean;
+  verified: boolean;
   createdAt: Date;
   updatedAt: Date;
 }

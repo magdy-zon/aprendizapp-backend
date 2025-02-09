@@ -1,6 +1,6 @@
-import { inject } from "inversify";
-import { BaseHttpController, httpGet, requestParam } from "inversify-express-utils";
-import { BaseUseCaseQuestionnaire } from "@clean/core";
+import { inject } from 'inversify';
+import { BaseHttpController, httpGet, requestParam } from 'inversify-express-utils';
+import { BaseUseCaseQuestionnaire } from '@clean/core';
 
 
 export class BaseQuestionnaireController extends BaseHttpController {

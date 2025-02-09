@@ -1,6 +1,6 @@
-import { BaseUseCaseBlock } from "@clean/core";
-import { inject } from "inversify";
-import { BaseHttpController, httpGet } from "inversify-express-utils";
+import { BaseUseCaseBlock } from '@clean/core';
+import { inject } from 'inversify';
+import { BaseHttpController, httpGet } from 'inversify-express-utils';
 
 export class BaseBlockController extends BaseHttpController {
   @inject('BaseUseCaseBlock') private ucBlock: BaseUseCaseBlock;

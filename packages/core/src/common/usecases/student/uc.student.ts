@@ -1,4 +1,4 @@
-import { IBndStudentRead } from "../../boundaries";
+import { IBndStudentRead } from '../../boundaries';
 
 
 export class BaseUseCaseStudent {

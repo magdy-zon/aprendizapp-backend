@@ -1,4 +1,4 @@
-import { IBndBlockRead } from "../../boundaries";
+import { IBndBlockRead } from '../../boundaries';
 
 export class BaseUseCaseBlock {
   constructor(

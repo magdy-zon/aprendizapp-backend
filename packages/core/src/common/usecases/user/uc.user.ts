@@ -16,7 +16,7 @@ export class BaseUseCaseUser {
       first_lastname: user.first_lastname,
       second_lastname: user.second_lastname,
       birthdate: DateTime.fromISO(user.birthdate),
-    }
+    };
 
     return this.bndUserWrite.createUser(userToDB);
   }

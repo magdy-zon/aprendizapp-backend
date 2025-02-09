@@ -1,15 +1,15 @@
-import { injectable } from "inversify";
-import { IBndStudentRead } from "@clean/core";
-import { ModelStudent } from "../../models";
+import { injectable } from 'inversify';
+import { IBndStudentRead } from '@clean/core';
+import { ModelStudent } from '../../models';
 
 @injectable()
 export class ImplBndStudentRead implements IBndStudentRead {
   public async allStudents() {
     try {
       const students = await ModelStudent.find();
-      console.log(students)
+      console.log(students);
     } catch (error) {
-      console.log(error)
+      console.log(error);
     }
   }
 }

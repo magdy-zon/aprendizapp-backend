@@ -1,3 +1,4 @@
+/* eslint-disable quotes */
 import { BaseUseCaseActivity } from "@clean/core";
 import { inject } from "inversify";
 import { BaseHttpController, httpGet, requestParam } from "inversify-express-utils";

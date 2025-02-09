@@ -1,5 +1,5 @@
-import { injectable } from "inversify";
-import { BaseMiddleware } from "inversify-express-utils";
+import { injectable } from 'inversify';
+import { BaseMiddleware } from 'inversify-express-utils';
 import { validationResult } from 'express-validator';
 import { NextFunction, Request, Response } from 'express';
 
@@ -26,7 +26,7 @@ export class MiddlewareParameters extends BaseMiddleware {
       });
       response.message = messages.join(', ');
       response.details = params.join(', ');
-      console.log(response) 
+      console.log(response);
     } 
     return next();
   }

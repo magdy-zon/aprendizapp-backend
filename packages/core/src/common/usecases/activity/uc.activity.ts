@@ -1,4 +1,4 @@
-import { IBndActivityRead } from "../../boundaries";
+import { IBndActivityRead } from '../../boundaries';
 
 export class BaseUseCaseActivity {
   constructor(

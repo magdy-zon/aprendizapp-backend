@@ -1,4 +1,4 @@
-import { IBndQuestionnaireRead } from "../../boundaries";
+import { IBndQuestionnaireRead } from '../../boundaries';
 
 export class BaseUseCaseQuestionnaire {
   constructor(

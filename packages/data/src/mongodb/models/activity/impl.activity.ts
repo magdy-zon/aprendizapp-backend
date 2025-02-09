@@ -21,7 +21,7 @@ class SchemaActivity extends Schema {
         required: false,
         ref: 'Block'
       }
-    })
+    });
   }
 }
 

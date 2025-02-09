@@ -39,7 +39,7 @@ class SchemaStudent extends Schema {
         createdAt: 'createdAt',
         updatedAt: 'updatedAt',
       },
-    })
+    });
   }
 }
 

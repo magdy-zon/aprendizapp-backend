@@ -1,6 +1,6 @@
-import { injectable } from "inversify";
-import { IBndQuestionnaireRead } from "@clean/core";
-import { ModelActivity, ModelQuestionnaire } from "../../models";
+import { injectable } from 'inversify';
+import { IBndQuestionnaireRead } from '@clean/core';
+import { ModelActivity, ModelQuestionnaire } from '../../models';
 
 @injectable()
 export class ImplBndQuestionnaireRead implements IBndQuestionnaireRead {
@@ -24,9 +24,9 @@ export class ImplBndQuestionnaireRead implements IBndQuestionnaireRead {
           notes: activity.notes
         },
         questionnaire: questionnaires
-      }
+      };
     } catch (error) {
-      throw console.log(error)
+      throw console.log(error);
     }
   }
 }

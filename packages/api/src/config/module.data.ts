@@ -1,12 +1,11 @@
 import { ContainerModule, interfaces } from 'inversify';
 import { COMMON } from './';
-import { 
-  BaseStudentController, 
-  BaseQuestionnaireController,
-  BaseActivityController,
-  BaseBlockController,
-  BaseUserController
-} from '../modules/common';
+
+import { BaseQuestionnaireController } from '../modules/questionnaire';
+import { BaseBlockController } from '../modules/block';
+import { BaseUserController } from '../modules/user';
+import { BaseStudentController } from '../modules/student'; 
+import { BaseActivityController} from '../modules/activity';
 
 import { 
   ImplBndActivityRead,

@@ -98,3 +98,22 @@ If you want to create amigration add it in the ```packages/data/src/mongodb/migr
 ```
 npm run migrate:up
 ```
+
+
+
+
+# Common errors
+
+If you receive the next error:
+
+```
+@clean/api: > @clean/api@1.0.0 start
+@clean/api: > node -r ts-node/register ./dist/server.js
+@clean/api: error: {
+@clean/api:     "message": "Cannot read properties of undefined (reading 'toLowerCase')",
+@clean/api:     "name": "TypeError"
+@clean/api: }
+@clean/api: npm notice
+```
+
+Validate you load variables with source command

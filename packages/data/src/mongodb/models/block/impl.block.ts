@@ -9,7 +9,7 @@ class SchemaBlock extends Schema {
         type: String,
         required: true
       },
-    })
+    });
   }
 }
 

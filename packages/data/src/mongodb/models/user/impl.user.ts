@@ -40,7 +40,7 @@ class SchemaUser extends Schema {
         createdAt: 'createdAt',
         updatedAt: 'updatedAt'
       },
-    })
+    });
   }
 }
 

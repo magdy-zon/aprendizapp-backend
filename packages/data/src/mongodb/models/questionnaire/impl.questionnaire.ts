@@ -30,7 +30,7 @@ class SchemaQuestionnaire extends Schema {
           }
         }
       ]
-    })
+    });
   }
 }
 

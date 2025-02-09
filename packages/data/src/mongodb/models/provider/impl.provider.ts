@@ -68,7 +68,7 @@ class SchemaProvider extends Schema {
         createdAt: 'createdAt',
         updatedAt: 'updatedAt'
       },
-    })
+    });
   }
 }
 

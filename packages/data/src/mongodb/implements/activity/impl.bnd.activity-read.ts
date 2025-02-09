@@ -1,6 +1,6 @@
-import { IBndActivityRead } from "@clean/core";
-import { injectable } from "inversify";
-import { IModelActivity, IModelBlock, ModelActivity, ModelBlock } from "../../models";
+import { IBndActivityRead } from '@clean/core';
+import { injectable } from 'inversify';
+import { IModelActivity, IModelBlock, ModelActivity, ModelBlock } from '../../models';
 
 @injectable()
 export class ImplBndActivityRead implements IBndActivityRead {
@@ -19,7 +19,7 @@ export class ImplBndActivityRead implements IBndActivityRead {
           _id: block.id
         },
         activities
-      }
+      };
     } catch (error) {
       throw console.log(error);
     }

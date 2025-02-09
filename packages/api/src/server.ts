@@ -2,4 +2,9 @@ import { ServerApp } from './app';
 
 const server = new ServerApp();
 
-server.listen();
+try {
+  server.listen();
+  
+} catch (error) {
+  console.log(error);
+}
