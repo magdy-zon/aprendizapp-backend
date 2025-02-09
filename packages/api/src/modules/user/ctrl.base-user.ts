@@ -1,7 +1,9 @@
-import { BaseUseCaseUser, IParamsUserEntity } from "@clean/core";
-import { inject } from "inversify";
-import { BaseHttpController, httpPost, requestBody } from "inversify-express-utils";
+import { inject } from 'inversify';
+import { BaseHttpController, httpPost, requestBody } from 'inversify-express-utils';
+import { checkSchema } from 'express-validator';
 
+
+import { BaseUseCaseUser, IParamsUserEntity } from '@clean/core';
 export class BaseUserController extends BaseHttpController {
   @inject('BaseUseCaseUser') private ucUser: BaseUseCaseUser;
 
@@ -9,7 +11,10 @@ export class BaseUserController extends BaseHttpController {
     super();
   }
 
-  @httpPost('/user')
+  @httpPost('
+    /user',
+    ...checkSchema()
+  )
   public async createUser(
     @requestBody() user: IParamsUserEntity  
   ) {

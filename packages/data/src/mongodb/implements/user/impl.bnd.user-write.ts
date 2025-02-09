@@ -1,8 +1,8 @@
-import { injectable } from "inversify";
-import { startSession } from "mongoose";
+import { injectable } from 'inversify';
+import { startSession } from 'mongoose';
 
-import { IModelUser, ModelUser } from "../../models";
-import { IBndUserWrite } from "@clean/core";
+import { IModelUser, ModelUser } from '../../models';
+import { IBndUserWrite } from '@clean/core';
 
 
 
@@ -25,7 +25,7 @@ export class ImplBndUserWrite implements IBndUserWrite {
 
       await session.commitTransaction();
       session.endSession();
-      console.log("User created succesfully");
+      console.log('User created succesfully');
     } catch (error) {
       console.log(error);
     }

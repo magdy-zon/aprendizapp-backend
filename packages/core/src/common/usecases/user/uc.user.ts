@@ -1,7 +1,7 @@
-import { DateTime } from "luxon";
+import { DateTime } from 'luxon';
 
-import { IBndUserWrite } from "../../boundaries";
-import { IParamsUserEntity } from "src/common/entities";
+import { IBndUserWrite } from '../../boundaries';
+import { IParamsUserEntity } from 'src/common/entities';
 
 
 export class BaseUseCaseUser {
