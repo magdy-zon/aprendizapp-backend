@@ -1,4 +1,4 @@
-import { BaseUseCaseUser } from "@clean/core";
+import { BaseUseCaseUser, IParamsUserEntity } from "@clean/core";
 import { inject } from "inversify";
 import { BaseHttpController, httpPost, requestBody } from "inversify-express-utils";
 
@@ -11,10 +11,14 @@ export class BaseUserController extends BaseHttpController {
 
   @httpPost('/user')
   public async createUser(
-    @requestBody() user
+    @requestBody() user: IParamsUserEntity  
   ) {
-    const response = await this.ucUser.createUser(user);
+    await this.ucUser.createUser(user);
 
-    return {response};
+    return {
+      response: {},
+      message: 'User created succesfully!.',
+      details: '',
+    };
   }
 } 

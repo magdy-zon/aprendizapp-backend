@@ -23,7 +23,8 @@ class SchemaUser extends Schema {
       },
       verified: {
         type: Boolean,
-        required: true
+        required: true,
+        default: false
       },
       createdAt: {
         type: Date,

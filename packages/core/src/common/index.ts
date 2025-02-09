@@ -3,3 +3,4 @@ export * from './usecases';
 export * from './base.environment';
 export * from './base.types';
 export * from './ibase.logger';
+export * from './entities';
